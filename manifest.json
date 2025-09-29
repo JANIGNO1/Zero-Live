@@ -1,0 +1,59 @@
+{
+  "name": "Zero Live",
+  "short_name": "Zero",
+  "description": "Zero Live - Best live streaming app for rewards, 1v1 calls, and global fun.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#8338ec",
+  "theme_color": "#ff9ff3",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://zerolive.netlify.app/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://zerolive.netlify.app/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+
+{
+  "name": "Zero Live",
+  "short_name": "Zero",
+  "description": "Zero Live - Best live streaming app for rewards, 1v1 calls, and global fun.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#8338ec",
+  "theme_color": "#ff9ff3",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+{
+  "name": "Zero Live",
+  "short_name": "Zero",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#822EFF",
+  "theme_color": "#822EFF",
+  "icons": [
+    { "src": "https://i.postimg.cc/pdFwqFfY/zero-logo.jpg", "sizes": "192x192", "type": "image/webp" },
+    { "src": "https://i.postimg.cc/pdFwqFfY/zero-logo.jpg", "sizes": "512x512", "type": "image/webp" }
+  ]
+}

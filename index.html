@@ -58,79 +58,8 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- FULL CSS -->
-  <style>
-    :root{
-      --brandA:#FF32FF;
-      --brandB:#822EFF;
-      --whatsappA:#25D366;
-      --whatsappB:#128C7E;
-      --text:#333;
-      --card:#ffffff;
-    }
-    *{box-sizing:border-box;scroll-behavior:smooth}
-    body{
-      font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
-      margin:0;
-      color:var(--text);
-      line-height:1.6;
-      background:linear-gradient(135deg, var(--brandA), var(--brandB));
-      overflow-x:hidden;
-    }
-
-    /* Nav */
-    nav{
-      position:fixed; top:0; left:0; right:0; z-index:1000;
-      display:flex; align-items:center; justify-content:space-between;
-      padding:8px 18px;
-      background:rgba(0,0,0,0.55); backdrop-filter:blur(10px);
-      color:#fff; transition:top .35s ease;
-    }
-    nav .brand{display:flex; align-items:center; gap:10px;font-weight:700;font-size:.9rem}
-    nav .brand img{width:26px;height:26px;border-radius:50%}
-    nav ul{display:flex; gap:16px; list-style:none; margin:0; padding:0}
-    nav a{color:#fff; text-decoration:none; font-weight:500; font-size:.85rem}
-    nav a:hover{color:var(--brandA)}
-    .nav-btn{padding:6px 14px; border-radius:6px; font-size:.8rem;background:linear-gradient(45deg, var(--brandA), var(--brandB));color:#fff; box-shadow:0 4px 10px rgba(0,0,0,.15);transition:transform .2s ease}
-    .nav-btn:hover{transform:scale(1.05)}
-
-    /* Hero */
-    .hero{text-align:center; color:#fff;padding:120px 20px 80px;background:linear-gradient(135deg, var(--brandB), var(--brandA));border-radius:0 0 40px 40px; animation:fadeInUp 1s ease both;}
-    .hero-logo{width:140px;height:140px;border-radius:50%;border:4px solid #fff; box-shadow:0 6px 20px rgba(0,0,0,.2);margin-bottom:14px; object-fit:cover;}
-    .hero .welcome{font-size:1.25rem; margin:4px 0 0}
-    .hero h1{font-size:3rem;margin:6px 0 6px}
-    .hero .agency{font-weight:700;margin:0 0 20px}
-    .btn{display:inline-block; padding:14px 28px; margin:10px;border-radius:10px; font-weight:800; letter-spacing:.3px;text-decoration:none; transition:transform .25s ease, box-shadow .25s ease;box-shadow:0 8px 18px rgba(0,0,0,.18);}
-    .btn-primary{color:#fff;background:linear-gradient(45deg, var(--brandB), var(--brandA))}
-    .btn-primary:hover,.btn-whatsapp:hover{transform:translateY(-3px) scale(1.03)}
-    .btn-whatsapp{color:#fff; background:linear-gradient(45deg, var(--whatsappA), var(--whatsappB))}
-
-    /* Sections */
-    section{max-width:1024px; margin:40px auto; padding:46px 20px;background:var(--card); border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.12);opacity:0; transform:translateY(40px); transition:all .8s ease;text-align:center;}
-    section.show{opacity:1; transform:translateY(0)}
-    h2{color:var(--brandB); margin:0 0 16px; font-size:1.8rem}
-    .policy-img, .reward-image, .platform-image{max-width:100%; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,.15); margin:10px 0;}
-    .social{margin-top:22px; display:flex; justify-content:center; gap:14px; flex-wrap:wrap;}
-    .social a img{width:32px;height:32px;transition:transform .2s ease}
-    .social a img:hover{transform:scale(1.15)}
-    footer{text-align:center; color:#fff; padding:20px;background:linear-gradient(90deg, var(--brandB), var(--brandA));font-size:.95rem}
-    @keyframes fadeInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
-    @media (max-width:600px){.hero h1{font-size:2.4rem} nav ul{gap:12px} .btn{padding:12px 22px}}
-
-    /* Extra (Zero Section) */
-    .zero-section{background:#fff;padding:50px 20px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,0.06);font-family:"Segoe UI",Roboto,Arial,sans-serif;margin:50px 0;color:#333;}
-    .zero-container{max-width:850px;margin:0 auto;}
-    .zero-section h2{font-size:28px;font-weight:700;color:#1a237e;margin-bottom:15px;text-align:center;}
-    .zero-section .intro{font-size:18px;color:#444;text-align:center;margin-bottom:30px;line-height:1.6;}
-    .zero-highlight{background:#f4f7ff;padding:20px;border-left:5px solid #3f51b5;border-radius:8px;margin-bottom:30px;font-size:16px;line-height:1.6;}
-    .zero-highlight .reward{font-weight:600;color:#e65100;}
-    .zero-section h3{font-size:22px;margin:25px 0 12px;color:#1a237e;border-bottom:2px solid #e0e0e0;padding-bottom:5px;}
-    .rewards-list, .bonus-list{list-style:none;padding:0;margin:0 0 25px;}
-    .rewards-list li, .bonus-list li{margin:8px 0;font-size:16px;color:#333;}
-    .note{font-style:italic;color:#555;margin-bottom:30px;}
-    .contact-box{background:linear-gradient(135deg,#13836e,#3949ab);padding:18px;text-align:center;border-radius:10px;color:#fff;font-size:18px;font-weight:600;}
-    .contact-box strong{color:#ffeb3b;}
-  </style>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- NAV -->
@@ -150,7 +79,6 @@
     <a href="#download" class="btn btn-primary">Download Now</a>
   </section>
 
- 
   <!-- DOWNLOAD -->
   <section id="download">
     <h2>Download Our App</h2>
@@ -171,126 +99,50 @@
     <img src="https://i.postimg.cc/0QkZp0xm/banner-600x300.png" alt="About Me" class="platform-image">
   </section>
 
-<section class="zero-section">
-  <div class="zero-container">
-    <h2>ZERO Official Agent Invitation</h2>
-    <p class="intro">
-      Hi there! I’m <strong>ZERO’s Official Agent</strong>.  
-      We are inviting agencies to join us directly from the company.  
-      Be part of <strong>Zero</strong> – the fastest-growing 1v1 social call platform today!
-    </p>
-
-    <div class="zero-highlight">
-      <p>
-        Available for users: <strong>Ten, Ten Lite, Zanex, Akar, Sume</strong>.  
-        Agencies enjoy <span class="reward">exclusive invitation rewards 💰</span>  
-        while hosts benefit from <span class="reward">strong traffic + daily earnings 💰</span>.  
+  <!-- ZERO SECTION -->
+  <section class="zero-section">
+    <div class="zero-container">
+      <h2>ZERO Official Agent Invitation</h2>
+      <p class="intro">
+        Hi there! I’m <strong>ZERO’s Official Agent</strong>.  
+        We are inviting agencies to join us directly from the company.  
+        Be part of <strong>Zero</strong> – the fastest-growing 1v1 social call platform today!
       </p>
-      <small>(Both agency withdraw and self-withdraw supported)</small>
+
+      <div class="zero-highlight">
+        <p>
+          Available for users: <strong>Ten, Ten Lite, Zanex, Akar, Sume</strong>.  
+          Agencies enjoy <span class="reward">exclusive invitation rewards 💰</span>  
+          while hosts benefit from <span class="reward">strong traffic + daily earnings 💰</span>.  
+        </p>
+        <small>(Both agency withdraw and self-withdraw supported)</small>
+      </div>
+
+      <h3>Why Hosts Choose Zero</h3>
+      <ul class="rewards-list">
+        <li>💸 <strong>Daily Cash Rewards</strong> just by completing simple tasks:</li>
+        <li>• S-Level Star: <strong>$6.25/day</strong></li>
+        <li>• A-Level Talent: <strong>$4.25/day</strong></li>
+        <li>✅ Flexible: Work from the comfort of your home!</li>
+      </ul>
+
+      <h3>Agency Bonus Program</h3>
+      <p>Recruit S/A-Level hosts and maximize your earnings:</p>
+      <ul class="bonus-list">
+        <li>✨ 19 Hosts → <strong>$25 Bonus</strong></li>
+        <li>✨ 39 Hosts → <strong>$55 Bonus</strong></li>
+        <li>✨ 69 Hosts → <strong>$110 Bonus</strong> (Double Reward!)</li>
+        <li>✨ 99 Hosts → <strong>$170 Bonus</strong></li>
+        <li>✨ 129 Hosts → <strong>$250 Bonus</strong></li>
+        <li>✨ 199 Hosts → <strong>$500 BONUS 🏆</strong></li>
+      </ul>
+      <p class="note">📌 Valid Host = Registered + Rated + Streams 1+ Hour Daily</p>
+
+      <div class="contact-box">
+        <p>📲 Contact: <strong><a href="https://wa.me/923400278535?text=Hi%20…%20AGENT%20DANISH%20…I%20Need%20Your%20Help%20" target="_blank" rel="noopener">03400278535</a></strong></p>
+      </div>
     </div>
-
-    <h3>Why Hosts Choose Zero</h3>
-    <ul class="rewards-list">
-      <li>💸 <strong>Daily Cash Rewards</strong> just by completing simple tasks:</li>
-      <li>• S-Level Star: <strong>$6.25/day</strong></li>
-      <li>• A-Level Talent: <strong>$4.25/day</strong></li>
-      <li>✅ Flexible: Work from the comfort of your home!</li>
-    </ul>
-
-    <h3>Agency Bonus Program</h3>
-    <p>Recruit S/A-Level hosts and maximize your earnings:</p>
-    <ul class="bonus-list">
-      <li>✨ 19 Hosts → <strong>$25 Bonus</strong></li>
-      <li>✨ 39 Hosts → <strong>$55 Bonus</strong></li>
-      <li>✨ 69 Hosts → <strong>$110 Bonus</strong> (Double Reward!)</li>
-      <li>✨ 99 Hosts → <strong>$170 Bonus</strong></li>
-      <li>✨ 129 Hosts → <strong>$250 Bonus</strong></li>
-      <li>✨ 199 Hosts → <strong>$500 BONUS 🏆</strong></li>
-    </ul>
-    <p class="note">📌 Valid Host = Registered + Rated + Streams 1+ Hour Daily</p>
-
-    <div class="contact-box">
-      <p>📲 Contact: <strong><a href="https://wa.me/923400278535?text=Hi%20…%20AGENT%20DANISH%20…I%20Need%20Your%20Help%20" target="_blank" rel="noopener">03400278535</a></a></strong> to apply or ask questions.</p>
-    </div>
-  </div>
-</section>
-
-<style>
-.zero-section {
-  background: #ffffff;
-  padding: 50px 20px;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  margin: 50px 0;
-  color: #333;
-}
-.zero-container {
-  max-width: 850px;
-  margin: 0 auto;
-}
-.zero-section h2 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #1a237e;
-  margin-bottom: 15px;
-  text-align: center;
-}
-.zero-section .intro {
-  font-size: 18px;
-  color: #444;
-  text-align: center;
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
-.zero-highlight {
-  background: #f4f7ff;
-  padding: 20px;
-  border-left: 5px solid #3f51b5;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  font-size: 16px;
-  line-height: 1.6;
-}
-.zero-highlight .reward {
-  font-weight: 600;
-  color: #e65100;
-}
-.zero-section h3 {
-  font-size: 22px;
-  margin: 25px 0 12px;
-  color: #1a237e;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 5px;
-}
-.rewards-list, .bonus-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 25px;
-}
-.rewards-list li, .bonus-list li {
-  margin: 8px 0;
-  font-size: 16px;
-  color: #333;
-}
-.note {
-  font-style: italic;
-  color: #555;
-  margin-bottom: 30px;
-}
-.contact-box {
-  background: linear-gradient(135deg, #13836e, #3949ab);
-  padding: 18px;
-  text-align: center;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-}
-.contact-box strong {
-  color: #ffeb3b;
-}
-</style>
+  </section>
 
   <!-- REWARDS -->
   <section id="rewards">
@@ -298,36 +150,29 @@
     <p>Check Out The Exciting Rewards You Can Earn By Joining My Team!</p>
     <div class="reward-images">
       <img src="https://i.postimg.cc/d0yb4y2H/new-host-rewards.png" alt="Reward 1" class="reward-image">
-   <!-- <img src="https://i.postimg.cc/nLDy0DKb/agent-base-commission.png" alt="Reward 2" class="reward-image">
-     <img src="https://i.postimg.cc/RhsXFYvb/gift-share.jpg" alt="Reward 3" class="reward-image">
-      <img src="https://i.postimg.cc/HsN61FZr/Newbie-Bonus.png" alt="Reward 4" class="reward-image">
-      <img src="https://i.postimg.cc/wx0W01Dc/withdrawal.jpg" alt="Reward 5" class="reward-image">
-      <img src="https://i.postimg.cc/4y7h62z0/task.png" alt="Reward 6" class="reward-image"> -->
     </div>
   </section>
 
-<section id="rewards">
+  <section id="rewards">
     <h2>ZERO LIVE Agency Commission</h2>
    <p>You Can Earn The Following Rewards Waiting For You:</p>
     <div class="reward-images">
-    
       <img src="https://i.postimg.cc/nLDy0DKb/agent-base-commission.png" alt="Reward 2" class="reward-image">
-      </div>
+    </div>
   </section>
       
   <!-- POLICY -->
   <section id="policy">
     <h2>DAILY TASK</h2>
-    
     <div class="policy-images">
       <img src="https://i.postimg.cc/QxGJZGgk/Daily-Task.png" alt="Policy 1" class="policy-img">
       <img src="https://i.postimg.cc/TYMJvMjm/Daily-Task-S-Level-Host.png" alt="Policy 2" class="policy-img">
       <img src="https://i.postimg.cc/8PQmgQdL/Daily-Task-A-Level-Host.png" alt="Policy 4" class="policy-img">
       <img src="https://i.postimg.cc/KcgDWvTD/Daily-Task-Rules.png" alt="Policy 5" class="policy-img">
     </div>
-      </section>
-       <section id="policy">
-    <h2></h2>
+  </section>
+  
+  <section id="policy">
     <div class="logo-images">
       <img src="https://i.postimg.cc/pdFwqFfY/zero-logo.jpg" alt="Logo 1" class="policy-img">
       <img src="https://i.postimg.cc/7YHFLvnX/Pakistan-Official.png" alt="Logo 2" class="policy-img">
@@ -367,9 +212,7 @@
   
   <footer>© 2025 Zero Live — All rights reserved.</footer>
 
-  <script>
-    // Show animation when section visible
-    const sections=document.querySelectorAll("section");const reveal=()=>{sections.forEach(s=>{const r=s.getBoundingClientRect();if(r.top<window.innerHeight-80){s.classList.add("show")}})};window.addEventListener("scroll",reveal);window.addEventListener("load",reveal);
-  </script>
+  <!-- External JS -->
+  <script src="script.js"></script>
 </body>
-  </html>
+</html>

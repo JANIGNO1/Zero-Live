@@ -1,13 +1,14 @@
-// Hide navbar on scroll down, show on scroll up
-let lastScrollTop = 0;
-const navbar = document.querySelector(".navbar");
+// Show animation when section visible
+const sections = document.querySelectorAll("section");
 
-window.addEventListener("scroll", () => {
-  let st = window.scrollY;
-  if (st > lastScrollTop) {
-    navbar.style.top = "-70px"; // hide
-  } else {
-    navbar.style.top = "0"; // show
-  }
-  lastScrollTop = st;
-});
+const reveal = () => {
+  sections.forEach(s => {
+    const r = s.getBoundingClientRect();
+    if (r.top < window.innerHeight - 80) {
+      s.classList.add("show");
+    }
+  });
+};
+
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
